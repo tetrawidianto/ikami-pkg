@@ -1,0 +1,26 @@
+{
+    "name": "tetrawidianto/ikami-pkg",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tetra Widianto",
+            "email": "tetraw86@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravel/ui": "^3.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "IkamiPkg\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IkamiPkg\\IkamiPkgServiceProvider"
+            ]
+        }
+    }
+}
