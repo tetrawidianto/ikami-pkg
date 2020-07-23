@@ -9,7 +9,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "laravel/ui": "^3.0@dev"
+        "laravel/ui": "^3.0@dev",
+        "jeroennoten/laravel-adminlte": "dev-master",
+        "backpack/crud": "4.1.*",
+        "backpack/filemanager": "dev-master",
+        "backpack/permissionmanager": "^1.0@dev"
     },
     "autoload": {
         "psr-4": {
@@ -22,5 +26,9 @@
                 "IkamiPkg\\IkamiPkgServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "backpack/generators": "^1.0@dev",
+        "laracasts/generators": "dev-master"
     }
 }
