@@ -61,7 +61,7 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
     @endif
-
+    @livewireStyles
 </head>
 
 <body class="@yield('classes_body')" @yield('body_data')>
@@ -70,6 +70,8 @@
     <div id="app">
         @yield('body')
     </div>
+    
+    @livewireScripts
 
     {{-- Base Scripts --}}
     @if(!config('adminlte.enabled_laravel_mix'))

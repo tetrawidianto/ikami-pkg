@@ -47,7 +47,7 @@ return [
 
     'logo' => 'Indeks<b>KAMI</b>',
     // 'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img' => 'uploads/logo.jpg',
+    'logo_img' => 'uploads/logo-bssn.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -122,14 +122,14 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => '',
+    'classes_brand' => 'navbar-secondary',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_sidebar_nav' => 'nav-legacy nav-flat text-sm',
+    'classes_topnav' => 'navbar-dark navbar-primary text-sm',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -167,11 +167,12 @@ return [
     |
     */
 
-    'right_sidebar' => false,
+    'right_sidebar' => true,
+    'right_sidebar_toggler' => false,
     'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
+    'right_sidebar_theme' => 'light',
     'right_sidebar_slide' => true,
-    'right_sidebar_push' => true,
+    'right_sidebar_push' => false,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
     'right_sidebar_scrollbar_auto_hide' => 'l',
 
@@ -233,86 +234,91 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
+            'text' => 'Beranda',
+            'url' => 'home',
+            'active' => ['home*'],
+            'icon' => 'fas fa-home'
+        ],
+        'MENU',
+        // pengguna
+        [
+            'text' => 'Sistem Elektronik',
+            'url' => 'sistem-el',
+            'icon' => 'fas fa-server',
+            'active' => ['sistem-el*'],
+            'can' => 'registrasi-sistem-el'
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Asesmen',
+            'url' => 'asesmen',
+            'icon' => 'fas fa-check',
+            'active' => ['asesmen*'],
+            'can' => 'registrasi-asesmen'
+        ],
+        // verifikator
+        [
+            'text' => 'Verifikasi Penyedia',
+            'url' => 'ver-penyedia',
+            'icon' => 'fas fa-building',
+            'active' => ['ver-penyedia*'],
+            'can' => 'verifikasi-penyedia',
+            'label' => 'ver-penyedia',
+            'label_color' => 'warning'
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Verifikasi Pengguna',
+            'url' => 'ver-pengguna',
+            'icon' => 'fas fa-id-badge',
+            'active' => ['ver-pengguna*'],
+            'can' => 'verifikasi-pengguna',
+            'label' => 'ver-pengguna',
+            'label_color' => 'warning'
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Verifikasi Sistem El',
+            'url' => 'ver-sistem-el',
+            'icon' => 'fas fa-server',
+            'active' => ['ver-sistem-el*'],
+            'can' => 'verifikasi-sistem-el',
+            'label' => 'ver-sistem-el',
+            'label_color' => 'warning'
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
+            'text' => 'Verifikasi Asesi',
+            'url' => 'ver-asesi',
+            'icon' => 'fas fa-address-card',
+            'active' => ['ver-asesi*'],
+            'can' => 'verifikasi-asesi',
+            'label' => 'ver-asesi',
+            'label_color' => 'warning'
         ],
-        ['header' => 'labels'],
+        // admin
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text' => 'Penjadwalan DA',
+            'url' => 'penjadwalan-da',
+            'icon' => 'far fa-calendar-alt',
+            'active' => ['penjadwalan-da*'],
+            'can' => 'penjadwalan-da',
+            'label' => 'penjadwalan-da',
+            'label_color' => 'danger'
         ],
+        // asesor
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Desktop Assessment',
+            'url' => 'desktop-assessment',
+            'icon' => 'fas fa-check',
+            'active' => ['desktop-assessment*'],
+            'can' => 'desktop-assessment',
+            'label' => 'desktop-assessment',
+            'label_color' => 'warning'
         ],
+        // pimpinan
         [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Monitoring Sistem Elektronik',
+            'url' => 'monitoring-sistem-el',
+            'icon' => 'fas fa-chart-line',
+            'active' => ['monitoring-sistem-el*'],
+            'can' => 'monitoring-sistem-el',
         ],
     ],
 

@@ -25,10 +25,13 @@ class IkamiPkgServiceProvider extends ServiceProvider
 		$timestamps = date('Y_m_d_His', strtotime('1986-01-17'));
 
 		$this->publishes([
-            __DIR__.'/public/uploads/logo.jpg' => public_path('uploads/logo.jpg'),
+            __DIR__.'/public/uploads/logo-bssn.jpg' => public_path('uploads/logo-bssn.jpg'),
+            __DIR__.'/public/uploads/img/photo1.png' => public_path('uploads/img/photo1.png'),
             __DIR__.'/config/adminlte.php' => config_path('adminlte.php'),
             __DIR__.'/views/auth/auth-page.blade.php' => resource_path('views/vendor/adminlte/auth/auth-page.blade.php'),
             __DIR__.'/views/master.blade.php' => resource_path('views/vendor/adminlte/master.blade.php'),
+            __DIR__.'/views/partials/navbar/navbar.blade.php' => resource_path('views/vendor/adminlte/partials/navbar/navbar.blade.php'),
+            __DIR__.'/views/partials/sidebar/menu-item-link.blade.php' => resource_path('views/vendor/adminlte/partials/sidebar/menu-item-link.blade.php'),
             __DIR__.'/js/bootstrap.js' => resource_path('js/bootstrap.js'),
             __DIR__.'/sass/app.scss' => resource_path('sass/app.scss'),
             __DIR__.'/webpack.mix.js' => base_path('webpack.mix.js'),
@@ -36,6 +39,7 @@ class IkamiPkgServiceProvider extends ServiceProvider
             __DIR__.'/config/backpack/base.php' => config_path('backpack/base.php'),
             __DIR__.'/views/sidebar_content.blade.php' => resource_path('views/vendor/backpack/base/inc/sidebar_content.blade.php'),
             __DIR__.'/app/User.php' => base_path('app/User.php'),
+            __DIR__.'/app/Http/Kernel.php' => base_path('app/Http/Kernel.php'),
             __DIR__.'/routes/web.php' => base_path('routes/web.php'),
         ], 'ikami-starter');
 	}
