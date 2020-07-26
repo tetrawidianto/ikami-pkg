@@ -12,6 +12,11 @@ try {
 
     require('ikami-pkg');
 
+    // Select2
+    require('../../public/vendor/select2/js/select2');
+
+    require('../../vendor/almasaeed2010/adminlte/dist/js/adminlte');
+
     require('bootstrap');
 } catch (e) {}
 

@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACQ,oHAA4G;AAC5G,uDAA4C;AAE5C,yDAA8C;AAE9C,mDAAwC;AAExC,mEAAwD",
+"mappings": "AACQ,oHAA4G;AAC5G,uDAA4C;AAE5C,yDAA8C;AAE9C,mDAAwC",
 "sources": ["../sass/app.scss"],
 "names": [],
 "file": "app.css"
