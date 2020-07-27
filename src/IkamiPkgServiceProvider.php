@@ -30,6 +30,7 @@ class IkamiPkgServiceProvider extends ServiceProvider
             __DIR__.'/views/sidebar_content.blade.php' => resource_path('views/vendor/backpack/base/inc/sidebar_content.blade.php'),
             __DIR__.'/app/User.php' => base_path('app/User.php'),
             __DIR__.'/app/Http/Kernel.php' => base_path('app/Http/Kernel.php'),
+            __DIR__.'/config/filesystems.php' => config_path('filesystems.php'),
         ], 'ikami-pkg');
 	}
 
