@@ -9,7 +9,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "laravel/ui": "^3.0@dev",
+        "laravel/ui": "^2.4",
         "jeroennoten/laravel-adminlte": "dev-master",
         "backpack/crud": "4.1.*",
         "backpack/filemanager": "dev-master",
